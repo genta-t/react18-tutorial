@@ -15,6 +15,7 @@ const UseEffect = () => {
       <h2>useEffect</h2>
       <button onClick={handleClick}>+</button>
       <p>{count}</p>
+      <hr />
     </>
   );
 }

@@ -6,12 +6,13 @@ const UseState = () => {
   const handleClick = () => {
     setCount(count + 1);
   };
-  
+
   return (
     <>
       <h2>useState</h2>
       <button onClick={handleClick}>+</button>
       <p>{count}</p>
+      <hr />
     </>
   );
 }
