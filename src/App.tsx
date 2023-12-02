@@ -11,6 +11,7 @@ import Use from './components/items/Use';
 import UseDeferredValue from './components/UseDeferredValue';
 import UseId from './components/UseId';
 import UseImperativeHandle from './components/UseImperativeHandle';
+import UseSyncExternalStore from './components/UseSyncExternalStore';
 
 // useはあまり使わない？？サンプルではuseContextを使った。
 export const ThemeContext = createContext<string | null>(null);
@@ -32,6 +33,7 @@ const App = () => {
       <UseDeferredValue />
       <UseId />
       <UseImperativeHandle />
+      <UseSyncExternalStore />
     </>
   );
 }
