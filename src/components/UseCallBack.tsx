@@ -18,8 +18,8 @@ const UseCallBack = () => {
   return (
     <>
       <h2>useCallBack</h2>
-        <p>{counter}</p>
-        <SomeChild showCount={showCount} />
+      <p>{counter}</p>
+      <SomeChild showCount={showCount} />
       <hr />
     </>
   );

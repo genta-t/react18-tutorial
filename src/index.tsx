@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// useContext 
 const containerData = {
   name: "名前です。",
   age: 28,
