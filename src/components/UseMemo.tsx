@@ -27,11 +27,11 @@ const UseMemo = () => {
   return (
     <>
       <h2>useMemo</h2>
-        <p>カウント１：{count01}</p>
-        <p>カウント２：{count02}</p>
-        <p>カウント２の結果：{square}</p>
-        <button onClick={() => setCount01(count01 + 1)}>count01</button>
-        <button onClick={() => setCount02(count02 + 1)}>count02</button>
+      <p>カウント１：{count01}</p>
+      <p>カウント２：{count02}</p>
+      <p>カウント２の結果：{square}</p>
+      <button onClick={() => setCount01(count01 + 1)}>count01</button>
+      <button onClick={() => setCount02(count02 + 1)}>count02</button>
       <hr />
     </>
   );

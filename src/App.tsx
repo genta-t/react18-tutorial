@@ -8,6 +8,7 @@ import UseReducer from './components/UseReducer';
 import UseRef from './components/UseRef';
 import UseState from './components/UseState';
 import Use from './components/items/Use';
+import UseDeferredValue from './components/UseDeferredValue';
 
 // useはあまり使わない？？サンプルではuseContextを使った。
 export const ThemeContext = createContext<string | null>(null);
@@ -26,6 +27,7 @@ const App = () => {
       <ThemeContext.Provider value="dark">
         <Use />
       </ThemeContext.Provider>
+      <UseDeferredValue />
     </>
   );
 }
