@@ -1,5 +1,6 @@
 import UseContext from './components/UseContext';
 import UseEffect from './components/UseEffect';
+import UseRef from './components/UseRef';
 import UseState from './components/UseState';
 
 const App = () => {
@@ -8,6 +9,7 @@ const App = () => {
       <UseState />
       <UseEffect />
       <UseContext />
+      <UseRef />
     </>
   );
 }
