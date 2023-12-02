@@ -1,3 +1,4 @@
+import UseCallBack from './components/UseCallBack';
 import UseContext from './components/UseContext';
 import UseEffect from './components/UseEffect';
 import UseMemo from './components/UseMemo';
@@ -14,6 +15,7 @@ const App = () => {
       <UseRef />
       <UseReducer />
       <UseMemo />
+      <UseCallBack />
     </>
   );
 }
