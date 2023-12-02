@@ -9,6 +9,7 @@ import UseRef from './components/UseRef';
 import UseState from './components/UseState';
 import Use from './components/items/Use';
 import UseDeferredValue from './components/UseDeferredValue';
+import UseId from './components/UseId';
 
 // useはあまり使わない？？サンプルではuseContextを使った。
 export const ThemeContext = createContext<string | null>(null);
@@ -28,6 +29,7 @@ const App = () => {
         <Use />
       </ThemeContext.Provider>
       <UseDeferredValue />
+      <UseId />
     </>
   );
 }
