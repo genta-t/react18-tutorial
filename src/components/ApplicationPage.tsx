@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import UseState from './application/UseState';
+import UseEffect from './application/UseEffect';
 
 const ApplicationPage = () => {
   
@@ -9,6 +10,7 @@ const ApplicationPage = () => {
       <Link to="/">ホーム</Link>
       <p>応用です</p>
       <UseState />
+      <UseEffect />
     </>
   );
 }
