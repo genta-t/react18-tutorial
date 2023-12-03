@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
+import { TypesItem, TypesPost, TypesResource, TypesTodo } from "../items/types";
+import axios from "axios";
 
 const UseEffect = () => {
-  const [ isDisplay, setIsDisplay ] = useState(true);
+  const [ isDisplay, setIsDisplay ] = useState(false);
 
   const handleDisplay = () => {
     setIsDisplay(!isDisplay);
@@ -14,11 +16,57 @@ const UseEffect = () => {
         {isDisplay ? "非表示" : "表示"}
       </button>
       {isDisplay && <CountComp />}
+      <p>応用</p>
+      <ItemList />
+      <hr />
     </>
   );
 }
 
 export default UseEffect;
+
+const ItemList = () => {
+  const [ items, setItems ] = useState<TypesItem[]>([]);
+  const [ resource, setResource ] = useState<TypesResource>("todos");
+
+  useEffect(() => {
+    const fetchItems = async () => {
+      try{
+        const res = await axios.get(`https://jsonplaceholder.typicode.com/${resource}`);
+        console.log("res", res.data);
+        const itemData: TypesItem[] = res.data.map((d: TypesTodo | TypesPost) => {
+          return {
+            id: d.id,
+            title: d.title,
+          }
+        })
+        setItems(itemData);
+      } catch (err){
+        console.log(err);
+      }
+    }
+    fetchItems();
+  }, [resource]);
+
+  const onTodoBtnClick = () => {
+    setResource("todos");
+  };
+  const onPostBtnClick = () => {
+    setResource("posts");
+  };
+
+  return(
+    <>
+      <button onClick={() => onTodoBtnClick()}>Todos</button>
+      <button onClick={() => onPostBtnClick()}>Posts</button>
+      <ul style={{ display: "grid", gridTemplateColumns: "1fr 1fr"}}>
+        {items.map((i) => {
+          return <li key={i.id}>{i.title}</li>
+        })}
+      </ul>
+    </>
+  )
+}
 
 const CountComp = () => {
   const [ count1 , setCount1 ] = useState(0);
