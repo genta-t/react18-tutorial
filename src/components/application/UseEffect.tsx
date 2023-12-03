@@ -4,10 +4,15 @@ import axios from "axios";
 
 const UseEffect = () => {
   const [ isDisplay, setIsDisplay ] = useState(false);
+  const [ isItemList, setIsItemList ] = useState(false);
 
   const handleDisplay = () => {
     setIsDisplay(!isDisplay);
   }
+  const handleListItem = () => {
+    setIsItemList(!isItemList);
+  }
+
   return (
     <>
       <h2>useEffect</h2>
@@ -17,7 +22,10 @@ const UseEffect = () => {
       </button>
       {isDisplay && <CountComp />}
       <p>応用</p>
-      {/* <ItemList /> */}
+      <button onClick={() => handleListItem()}>
+        {isItemList ? "非表示" : "表示"}
+      </button>
+      {isItemList && <ItemList />}
       <hr />
     </>
   );
