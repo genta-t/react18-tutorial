@@ -17,7 +17,7 @@ const UseEffect = () => {
       </button>
       {isDisplay && <CountComp />}
       <p>応用</p>
-      <ItemList />
+      {/* <ItemList /> */}
       <hr />
     </>
   );

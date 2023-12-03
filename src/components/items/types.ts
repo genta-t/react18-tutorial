@@ -26,3 +26,12 @@ export type TypesItem = {
 };
 
 export type TypesResource = "todos" | "posts";
+
+export type AuthProviderProps = {
+  children: React.ReactNode;
+}
+
+export type TypeUserAuth = {
+  userAuth: boolean;
+  setUserAuth: React.Dispatch<React.SetStateAction<boolean>>;
+}
