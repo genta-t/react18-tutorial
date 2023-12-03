@@ -1,4 +1,4 @@
-import useLocalStorageAge from "./items/useLocalStorageAge";
+import useLocalStorageAge from "../items/useLocalStorageAge";
 
 // 自作でhookが作れる
 

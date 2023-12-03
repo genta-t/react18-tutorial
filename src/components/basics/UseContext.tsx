@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { ContainerDataContext } from "..";
+import { ContainerDataContext } from "../..";
 
 //useContextはログイン情報を共有したい時にどのコンポーネントでも使えるようにするためにindex.tsxにcreateContext書く
 

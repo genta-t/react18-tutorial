@@ -1,5 +1,5 @@
 import { useContext, ReactNode } from "react";
-import { ThemeContext } from "../../App";
+import { ThemeContext } from "../BasicPage";
 
 // useはあまり使わない？？サンプルではuseContextを使った。
 const Use = () => {

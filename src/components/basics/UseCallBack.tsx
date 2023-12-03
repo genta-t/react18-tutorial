@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import SomeChild from "./items/SomeChild";
+import SomeChild from "../items/SomeChild";
 
 // 関数のメモ化 useMemoの関数バージョン
 
