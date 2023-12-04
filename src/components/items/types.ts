@@ -48,3 +48,21 @@ export type TypeAction = {
   type: "DEPOSIT" | "WITHDRAW";
   payload: number;
 }
+
+export type TypesTitle = {
+  title: string;
+};
+
+export type TypesSubTitle = {
+  subTitle: string;
+};
+
+export type TypesCounter = {
+  counterTitle: string;
+  count: number;
+};
+
+export type TypesButton = {
+  buttonText: string;
+  onClick: () => void;
+};

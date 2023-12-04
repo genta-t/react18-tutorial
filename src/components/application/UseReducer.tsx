@@ -5,6 +5,7 @@ import { TypeAction, TypeInitialState } from "../items/types";
 // より複雑なロジックを用いてstate管理をする時に使う。
 // 前のstateに基づいて次のstateが計算される場合。
 // 一番のメリットはstateやロジックの数が増えても、state更新の起点がdispatch一つに集約される
+// 別で状態管理しないといけない時は使えない！！
 
 
 const UseReducer = () => {
