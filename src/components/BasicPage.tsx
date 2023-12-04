@@ -23,6 +23,7 @@ const BasicPage = () => {
   return (
     <>
       <Link to="/application">応用ページへ</Link>
+      <Link to="/custom-hooks">カスタムフックページへ</Link>
       <Link to="/">ホーム</Link>
       <p>基本です</p>
       <UseState />
