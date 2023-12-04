@@ -66,3 +66,9 @@ export type TypesButton = {
   buttonText: string;
   onClick: () => void;
 };
+
+export type TypesForm = {
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
+};

@@ -4,6 +4,7 @@ import UseEffect from './application/UseEffect';
 import UseContext from './application/UseContext';
 import UseReducer from './application/UseReducer';
 import UseCallBack from './application/UseCallBack';
+import UseMemo from './application/UseMemo';
 
 const ApplicationPage = () => {
   
@@ -17,6 +18,7 @@ const ApplicationPage = () => {
       <UseContext />
       <UseReducer />
       <UseCallBack />
+      <UseMemo />
     </>
   );
 }
