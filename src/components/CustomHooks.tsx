@@ -3,6 +3,7 @@ import ToggleComp from './customHooks/toggle/ToggleComp';
 import TimeoutComp from './customHooks/timeOut/TimeoutComp';
 import DebounceComp from './customHooks/debounce/DebounceComp';
 import UpdateEffectComp from './customHooks/updateEffect/UpdateEffectComp';
+import ArrayComp from './customHooks/array/ArrayComp';
 
 const CustomHooksPage = () => {
   
@@ -16,6 +17,7 @@ const CustomHooksPage = () => {
       <TimeoutComp />
       <DebounceComp />
       <UpdateEffectComp />
+      <ArrayComp />
     </>
   );
 }
