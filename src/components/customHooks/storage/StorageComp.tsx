@@ -2,8 +2,8 @@ import { useSessionStorage } from "./useStorage";
 
 
 const StorageComp = () => {
-  const [ name, setName, removeName ] = useSessionStorage("name", "かいる");
-  const [ age, setAge, removeAge ] = useSessionStorage("age", 26);
+  const [ name, setName, removeName ] = useSessionStorage<string>("name", "かいる");
+  const [ age, setAge, removeAge ] = useSessionStorage<number>("age", 26);
 
   const handleName = () => {
     setName(name === "かいる" ? "じょん" : "かいる")
