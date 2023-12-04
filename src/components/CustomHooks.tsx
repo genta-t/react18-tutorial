@@ -5,6 +5,7 @@ import DebounceComp from './customHooks/debounce/DebounceComp';
 import UpdateEffectComp from './customHooks/updateEffect/UpdateEffectComp';
 import ArrayComp from './customHooks/array/ArrayComp';
 import PreviousComp from './customHooks/previous/PreviousComp';
+import StateWithHistoryComp from './customHooks/stateWithHistory/StateWithHistoryComp';
 
 const CustomHooksPage = () => {
   
@@ -20,6 +21,7 @@ const CustomHooksPage = () => {
       <UpdateEffectComp />
       <ArrayComp />
       <PreviousComp />
+      <StateWithHistoryComp />
     </>
   );
 }
