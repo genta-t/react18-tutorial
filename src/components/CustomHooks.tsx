@@ -6,6 +6,7 @@ import UpdateEffectComp from './customHooks/updateEffect/UpdateEffectComp';
 import ArrayComp from './customHooks/array/ArrayComp';
 import PreviousComp from './customHooks/previous/PreviousComp';
 import StateWithHistoryComp from './customHooks/stateWithHistory/StateWithHistoryComp';
+import StorageComp from './customHooks/storage/StorageComp';
 
 const CustomHooksPage = () => {
   
@@ -22,6 +23,7 @@ const CustomHooksPage = () => {
       <ArrayComp />
       <PreviousComp />
       <StateWithHistoryComp />
+      <StorageComp />
     </>
   );
 }
