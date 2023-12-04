@@ -5,10 +5,12 @@ const ToggleComp = () => {
 
   return (
     <>
+      <h2>Toggle</h2>
       <p>{value.toString()}</p>
       <button onClick={() => toggleValue()}>Toggle</button>
       <button onClick={() => toggleValue(true)}>True</button>
       <button onClick={() => toggleValue(false)}>False</button>
+      <hr />
     </>
   )
 }
