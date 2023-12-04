@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useState } from "react";
 
-type TypeCallback = () => Promise<string>; 
+type TypeCallback = () => Promise<any>; 
 
-export const useAsync = (callback: TypeCallback, dependencies = []) => {
+export const useAsync = (callback: TypeCallback, dependencies: any[] = []) => {
   const [ loading, setLoading ] = useState(true);
   const [ error, setError ] = useState<string | undefined>();
   const [ value, setValue ] = useState<string | undefined>();
