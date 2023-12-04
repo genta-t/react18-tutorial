@@ -7,6 +7,7 @@ import ArrayComp from './customHooks/array/ArrayComp';
 import PreviousComp from './customHooks/previous/PreviousComp';
 import StateWithHistoryComp from './customHooks/stateWithHistory/StateWithHistoryComp';
 import StorageComp from './customHooks/storage/StorageComp';
+import AsyncComp from './customHooks/async/AsyncComp';
 
 const CustomHooksPage = () => {
   
@@ -24,6 +25,7 @@ const CustomHooksPage = () => {
       <PreviousComp />
       <StateWithHistoryComp />
       <StorageComp />
+      <AsyncComp />
     </>
   );
 }
