@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { useDebounce } from "./useDebounce";
 
-
-const Debounce = () => {
+const DebounceComp = () => {
   const [ count, setCount ] = useState(100);
   useDebounce(() => alert(count), 1000, [count])
   return (
@@ -15,4 +14,4 @@ const Debounce = () => {
   )
 }
 
-export default Debounce;
+export default DebounceComp;

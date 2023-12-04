@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import ToggleComp from './customHooks/toggle/ToggleComp';
-import Timeout from './customHooks/timeOut/Timeout';
-import Debounce from './customHooks/debounce/Debounce';
+import TimeoutComp from './customHooks/timeOut/TimeoutComp';
+import DebounceComp from './customHooks/debounce/DebounceComp';
 import UpdateEffectComp from './customHooks/updateEffect/UpdateEffectComp';
 
 const CustomHooksPage = () => {
@@ -13,8 +13,8 @@ const CustomHooksPage = () => {
       <Link to="/">ホーム</Link>
       <p>カスタムフックです。</p>
       <ToggleComp />
-      <Timeout />
-      <Debounce />
+      <TimeoutComp />
+      <DebounceComp />
       <UpdateEffectComp />
     </>
   );

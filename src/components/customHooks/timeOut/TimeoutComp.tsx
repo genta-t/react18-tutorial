@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { useTimeOut } from "./useTimeOut";
 
-
-const Timeout = () => {
+const TimeoutComp = () => {
   const [ count, setCount ] = useState(100);
   const { clear, reset } = useTimeOut(() => setCount(0), 2000)
   // ページ読み込み時に設定時間内にボタンを押すとカウント初期値が設定
@@ -18,4 +17,4 @@ const Timeout = () => {
   )
 }
 
-export default Timeout;
+export default TimeoutComp;
