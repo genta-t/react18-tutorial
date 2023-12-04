@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import UseState from './application/UseState';
 import UseEffect from './application/UseEffect';
 import UseContext from './application/UseContext';
+import UseReducer from './application/UseReducer';
 
 const ApplicationPage = () => {
   
@@ -13,6 +14,7 @@ const ApplicationPage = () => {
       <UseState />
       <UseEffect />
       <UseContext />
+      <UseReducer />
     </>
   );
 }

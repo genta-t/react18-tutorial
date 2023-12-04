@@ -35,3 +35,16 @@ export type TypeUserAuth = {
   userAuth: boolean;
   setUserAuth: React.Dispatch<React.SetStateAction<boolean>>;
 }
+
+export type TypeInitialState = {
+  savings: number;
+  histories: {
+    operation: string;
+    amount: number;
+  }[];
+}
+
+export type TypeAction = {
+  type: "DEPOSIT" | "WITHDRAW";
+  payload: number;
+}
