@@ -5,6 +5,7 @@ import UseContext from './application/UseContext';
 import UseReducer from './application/UseReducer';
 import UseCallBack from './application/UseCallBack';
 import UseMemo from './application/UseMemo';
+import UseRef from './application/UseRef';
 
 const ApplicationPage = () => {
   
@@ -19,6 +20,7 @@ const ApplicationPage = () => {
       <UseReducer />
       <UseCallBack />
       <UseMemo />
+      <UseRef />
     </>
   );
 }

@@ -11,8 +11,7 @@ const UseMemo = () => {
   // useMemoを使いheavyに更新がある時だけ処理が走る。
   const heavyProcess = useMemo(() =>{
     return heavy(count);
-  }, [count])
-
+  }, [count]);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(); // フォームボタンを押した時にページリロードをしない処理
@@ -30,6 +29,7 @@ const UseMemo = () => {
         onChange={(e) => {setUserName(e.target.value)}}
         onSubmit={(e) => handleSubmit(e)}
       />
+      <hr />
     </>
   );
 }
