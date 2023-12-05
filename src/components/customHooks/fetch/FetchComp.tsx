@@ -13,7 +13,7 @@ const FetchComp = () => {
 
   return (
     <>
-      <h2>Array</h2>
+      <h2>Fetch</h2>
       <p>{id}</p>
       <button onClick={() => setId(cId => cId +1)}>カレントID</button>
       <p>Loading: {loading.toString()}</p>
