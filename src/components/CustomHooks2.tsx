@@ -7,6 +7,7 @@ import EffectOnceComp from './customHooks/effectOnce/EffectOnceComp';
 import ClickOutsideComp from './customHooks/clickOutside/ClickOutsideComp';
 import DarkModeComp from './customHooks/darkMode/DarkModeComp';
 import TranslationComp from './customHooks/translation/TranslationComp';
+import CopyToClipboardComp from './customHooks/copyToClipboard/CopyToClipboardComp';
 
 const CustomHooksPage2 = () => {
   
@@ -21,6 +22,7 @@ const CustomHooksPage2 = () => {
       <EffectOnceComp />
       <ClickOutsideComp />
       <DarkModeComp />
+      <CopyToClipboardComp />
       {/* <TranslationComp /> */}
     </>
   );
