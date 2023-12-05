@@ -6,9 +6,9 @@ import SizeComp from './customHooks/size/SizeComp';
 import EffectOnceComp from './customHooks/effectOnce/EffectOnceComp';
 import ClickOutsideComp from './customHooks/clickOutside/ClickOutsideComp';
 import DarkModeComp from './customHooks/darkMode/DarkModeComp';
-import TranslationComp from './customHooks/translation/TranslationComp';
 import CopyToClipboardComp from './customHooks/copyToClipboard/CopyToClipboardComp';
 import CookieComp from './customHooks/cookie/CookieComp';
+import TranslationComp from './customHooks/translation/TranslationComp';
 
 const CustomHooksPage2 = () => {
   
@@ -25,7 +25,7 @@ const CustomHooksPage2 = () => {
       <DarkModeComp />
       <CopyToClipboardComp />
       <CookieComp />
-      {/* <TranslationComp /> */}
+      <TranslationComp />
     </>
   );
 }
