@@ -3,7 +3,7 @@ import { useEventListener } from "./useEventListener";
 
 const EventListenerComp = () => {
   const [ key, setKey ] = useState("");
-  useEventListener("keydown", e => {
+  useEventListener("keydown", (e: KeyboardEvent) => {
     setKey(e.key);
   });
 
