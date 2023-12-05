@@ -1,8 +1,6 @@
 import { useState } from "react";
 import { useFetch } from "./useFetch";
 
-
-
 const FetchComp = () => {
   const [ id, setId ] = useState(1);
   const { loading, error, value } = useFetch(
