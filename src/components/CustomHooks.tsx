@@ -11,6 +11,7 @@ import AsyncComp from './customHooks/async/AsyncComp';
 import FetchComp from './customHooks/fetch/FetchComp';
 import ScriptComp from './customHooks/script/ScriptComp';
 import DeepCompareEffectComp from './customHooks/deepCompareEffect/DeepCompareEffectComp';
+import EventListenerComp from './customHooks/eventListener/EventListenerComp';
 
 const CustomHooksPage = () => {
   
@@ -32,6 +33,7 @@ const CustomHooksPage = () => {
       <FetchComp />
       <ScriptComp />
       <DeepCompareEffectComp />
+      <EventListenerComp />
     </>
   );
 }
