@@ -12,6 +12,7 @@ import FetchComp from './customHooks/fetch/FetchComp';
 import ScriptComp from './customHooks/script/ScriptComp';
 import DeepCompareEffectComp from './customHooks/deepCompareEffect/DeepCompareEffectComp';
 import EventListenerComp from './customHooks/eventListener/EventListenerComp';
+import OnScreenComp from './customHooks/onScreen/OnScreenComp';
 
 const CustomHooksPage = () => {
   
@@ -34,6 +35,7 @@ const CustomHooksPage = () => {
       <ScriptComp />
       <DeepCompareEffectComp />
       <EventListenerComp />
+      <OnScreenComp />
     </>
   );
 }
