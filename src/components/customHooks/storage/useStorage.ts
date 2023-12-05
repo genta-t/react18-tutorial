@@ -2,11 +2,11 @@ import { useCallback, useEffect, useState } from "react";
 
 type TypeStorageValue<T> = T | (() => T);
 
-export const useLocalStorage = <T>(key: string, defaultValue: TypeStorageValue<T>) => {
+export const useLocalStorage = <T>(key: string, defaultValue?: TypeStorageValue<T>) => {
   return useStorage(key, defaultValue, window.localStorage);
 }
 
-export const useSessionStorage = <T>(key: string, defaultValue: TypeStorageValue<T>) => {
+export const useSessionStorage = <T>(key: string, defaultValue?: TypeStorageValue<T>) => {
   return useStorage(key, defaultValue, window.sessionStorage);
 }
 
