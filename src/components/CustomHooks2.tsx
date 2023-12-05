@@ -4,6 +4,8 @@ import GeolocationComp from './customHooks/geolocation/GeolocationComp';
 import StateWidthValidationComp from './customHooks/stateWidthValidation/StateWidthValidationComp';
 import SizeComp from './customHooks/size/SizeComp';
 import EffectOnceComp from './customHooks/effectOnce/EffectOnceComp';
+import TranslationComp from './customHooks/translation/TranslationComp';
+import ClickOutsideComp from './customHooks/clickOutside/ClickOutsideComp';
 
 const CustomHooksPage2 = () => {
   
@@ -16,6 +18,8 @@ const CustomHooksPage2 = () => {
       <StateWidthValidationComp />
       <SizeComp />
       <EffectOnceComp />
+      <ClickOutsideComp />
+      {/* <TranslationComp /> */}
     </>
   );
 }
