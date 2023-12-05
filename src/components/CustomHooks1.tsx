@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import ToggleComp from './customHooks/toggle/ToggleComp';
 import TimeoutComp from './customHooks/timeOut/TimeoutComp';
 import DebounceComp from './customHooks/debounce/DebounceComp';
@@ -14,15 +13,14 @@ import DeepCompareEffectComp from './customHooks/deepCompareEffect/DeepCompareEf
 import EventListenerComp from './customHooks/eventListener/EventListenerComp';
 import OnScreenComp from './customHooks/onScreen/OnScreenComp';
 import WindowSizeComp from './customHooks/windowSize/WindowSizeComp';
+import PageLinks from './items/PageLinks';
 
-const CustomHooksPage = () => {
+const CustomHooksPage1 = () => {
   
   return (
     <>
-      <Link to="/basic">基本ページへ</Link>
-      <Link to="/application">応用ページへ</Link>
-      <Link to="/">ホーム</Link>
-      <p>カスタムフックです。</p>
+      <PageLinks link={"/custom-hooks-1"}/>
+      <p>カスタムフック1です。</p>
       <ToggleComp />
       <TimeoutComp />
       <DebounceComp />
@@ -42,4 +40,4 @@ const CustomHooksPage = () => {
   );
 }
 
-export default CustomHooksPage;
+export default CustomHooksPage1;

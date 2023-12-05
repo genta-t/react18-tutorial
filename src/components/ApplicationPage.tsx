@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import UseState from './application/UseState';
 import UseEffect from './application/UseEffect';
 import UseContext from './application/UseContext';
@@ -6,14 +5,13 @@ import UseReducer from './application/UseReducer';
 import UseCallBack from './application/UseCallBack';
 import UseMemo from './application/UseMemo';
 import UseRef from './application/UseRef';
+import PageLinks from './items/PageLinks';
 
 const ApplicationPage = () => {
   
   return (
     <>
-      <Link to="/basic">基本ページへ</Link>
-      <Link to="/custom-hooks">カスタムフックページへ</Link>
-      <Link to="/">ホーム</Link>
+      <PageLinks link={"/application"}/>
       <p>応用です</p>
       <UseState />
       <UseEffect />

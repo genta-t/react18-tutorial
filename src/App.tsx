@@ -1,7 +1,9 @@
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import BasicPage from './components/BasicPage';
 import ApplicationPage from './components/ApplicationPage';
-import CustomHooksPage from './components/CustomHooks';
+import CustomHooksPage1 from './components/CustomHooks1';
+import CustomHooksPage2 from './components/CustomHooks2';
+import PageLinks from './components/items/PageLinks';
 
 const App = () => {
   return (
@@ -10,12 +12,12 @@ const App = () => {
         <Routes>
           <Route path="/basic" element={<BasicPage />} />
           <Route path="/application" element={<ApplicationPage />} />
-          <Route path="/custom-hooks" element={<CustomHooksPage />} />
+          <Route path="/custom-hooks-1" element={<CustomHooksPage1 />} />
+          <Route path="/custom-hooks-2" element={<CustomHooksPage2 />} />
           <Route path="/" element={
             <>
-              <Link to="/basic">基本ページへ</Link>
-              <Link to="/application">応用ページへ</Link>
-              <Link to="/custom-hooks">カスタムフックページへ</Link>
+              <PageLinks link={"/"}/>
+              <h2>ホーム</h2>
             </>
           } />
         </Routes>

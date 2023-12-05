@@ -13,7 +13,7 @@ import UseImperativeHandle from './basics/UseImperativeHandle';
 import UseSyncExternalStore from './basics/UseSyncExternalStore';
 import UseTransition from './basics/UseTransition';
 import UseState from './basics/UseState';
-import { Link } from 'react-router-dom';
+import PageLinks from './items/PageLinks';
 
 // useはあまり使わない？？サンプルではuseContextを使った。
 export const ThemeContext = createContext<string | null>(null);
@@ -22,9 +22,7 @@ const BasicPage = () => {
   
   return (
     <>
-      <Link to="/application">応用ページへ</Link>
-      <Link to="/custom-hooks">カスタムフックページへ</Link>
-      <Link to="/">ホーム</Link>
+      <PageLinks link={"/basic"}/>
       <p>基本です</p>
       <UseState />
       <UseEffect />
