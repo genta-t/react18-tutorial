@@ -13,6 +13,7 @@ import ScriptComp from './customHooks/script/ScriptComp';
 import DeepCompareEffectComp from './customHooks/deepCompareEffect/DeepCompareEffectComp';
 import EventListenerComp from './customHooks/eventListener/EventListenerComp';
 import OnScreenComp from './customHooks/onScreen/OnScreenComp';
+import WindowSizeComp from './customHooks/windowSize/WindowSizeComp';
 
 const CustomHooksPage = () => {
   
@@ -36,6 +37,7 @@ const CustomHooksPage = () => {
       <DeepCompareEffectComp />
       <EventListenerComp />
       <OnScreenComp />
+      <WindowSizeComp />
     </>
   );
 }
