@@ -10,6 +10,7 @@ import StorageComp from './customHooks/storage/StorageComp';
 import AsyncComp from './customHooks/async/AsyncComp';
 import FetchComp from './customHooks/fetch/FetchComp';
 import ScriptComp from './customHooks/script/ScriptComp';
+import DeepCompareEffectComp from './customHooks/deepCompareEffect/DeepCompareEffectComp';
 
 const CustomHooksPage = () => {
   
@@ -30,6 +31,7 @@ const CustomHooksPage = () => {
       <AsyncComp />
       <FetchComp />
       <ScriptComp />
+      <DeepCompareEffectComp />
     </>
   );
 }
