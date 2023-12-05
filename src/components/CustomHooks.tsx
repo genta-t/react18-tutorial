@@ -9,6 +9,7 @@ import StateWithHistoryComp from './customHooks/stateWithHistory/StateWithHistor
 import StorageComp from './customHooks/storage/StorageComp';
 import AsyncComp from './customHooks/async/AsyncComp';
 import FetchComp from './customHooks/fetch/FetchComp';
+import ScriptComp from './customHooks/script/ScriptComp';
 
 const CustomHooksPage = () => {
   
@@ -28,6 +29,7 @@ const CustomHooksPage = () => {
       <StorageComp />
       <AsyncComp />
       <FetchComp />
+      <ScriptComp />
     </>
   );
 }
