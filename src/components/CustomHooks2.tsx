@@ -10,6 +10,7 @@ import CopyToClipboardComp from './customHooks/copyToClipboard/CopyToClipboardCo
 import CookieComp from './customHooks/cookie/CookieComp';
 import TranslationComp from './customHooks/translation/TranslationComp';
 import OnlineStatusComp from './customHooks/onlineStatus/OnlineStatusComp';
+import RenderCountComp from './customHooks/renderCount/RenderCountComp';
 
 const CustomHooksPage2 = () => {
   
@@ -28,6 +29,7 @@ const CustomHooksPage2 = () => {
       <CookieComp />
       <TranslationComp />
       <OnlineStatusComp />
+      <RenderCountComp />
     </>
   );
 }
