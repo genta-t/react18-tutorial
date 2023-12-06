@@ -9,6 +9,7 @@ import DarkModeComp from './customHooks/darkMode/DarkModeComp';
 import CopyToClipboardComp from './customHooks/copyToClipboard/CopyToClipboardComp';
 import CookieComp from './customHooks/cookie/CookieComp';
 import TranslationComp from './customHooks/translation/TranslationComp';
+import OnlineStatusComp from './customHooks/onlineStatus/OnlineStatusComp';
 
 const CustomHooksPage2 = () => {
   
@@ -26,6 +27,7 @@ const CustomHooksPage2 = () => {
       <CopyToClipboardComp />
       <CookieComp />
       <TranslationComp />
+      <OnlineStatusComp />
     </>
   );
 }
