@@ -12,6 +12,7 @@ import TranslationComp from './customHooks/translation/TranslationComp';
 import OnlineStatusComp from './customHooks/onlineStatus/OnlineStatusComp';
 import RenderCountComp from './customHooks/renderCount/RenderCountComp';
 import DebugInformationComp from './customHooks/debugInformation/DebugInformationComp';
+import HoverComp from './customHooks/hover/HoverComp';
 
 const CustomHooksPage2 = () => {
   
@@ -32,6 +33,7 @@ const CustomHooksPage2 = () => {
       <OnlineStatusComp />
       <RenderCountComp />
       <DebugInformationComp />
+      <HoverComp />
     </>
   );
 }

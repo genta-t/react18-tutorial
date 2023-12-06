@@ -1,11 +1,11 @@
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 export const useEventListener = <T extends Event>(
   eventType: string,
   callback: (event: T) => void,
-  element: EventTarget | null = window
+  element?: React.RefObject<EventTarget>
 ) => {
-  const callbackRef = useRef(callback)
+  const callbackRef = useRef(callback);
 
   useEffect(() => {
     callbackRef.current = callback;
@@ -13,10 +13,15 @@ export const useEventListener = <T extends Event>(
 
   useEffect(() => {
     const handler = (e: T) => callbackRef.current(e);
-    if (element){
-      element.addEventListener(eventType, handler as EventListener);
+    if (element && element.current) {
+      const currentElement = element.current;
+      currentElement.addEventListener(eventType, handler as EventListener);
   
-      return () => element.removeEventListener(eventType, handler as EventListener);
+      return () => {
+        if (currentElement) {
+          currentElement.removeEventListener(eventType, handler as EventListener);
+        }
+      }
     }
   }, [eventType, element]);
 }
