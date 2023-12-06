@@ -2,7 +2,7 @@ const InputFormItem = ({
   title,
   labelName,
   type,
-  register,
+  InputRegister,
   errorMessage,
   rule,
 }: TypeInputFormItem) => {
@@ -13,7 +13,7 @@ const InputFormItem = ({
       <input
         id={labelName}
         type={type}
-        {...register(
+        {...InputRegister(
           labelName,
           rule
         )}
@@ -29,7 +29,7 @@ type TypeInputFormItem = {
   title: string;
   labelName: string;
   type: string;
-  register: any;
+  InputRegister: any;
   errorMessage: any;
   rule: any;
 }
