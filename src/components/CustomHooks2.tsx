@@ -13,6 +13,7 @@ import OnlineStatusComp from './customHooks/onlineStatus/OnlineStatusComp';
 import RenderCountComp from './customHooks/renderCount/RenderCountComp';
 import DebugInformationComp from './customHooks/debugInformation/DebugInformationComp';
 import HoverComp from './customHooks/hover/HoverComp';
+import LongPressComp from './customHooks/longPress/LongPressComp';
 
 const CustomHooksPage2 = () => {
   
@@ -34,6 +35,7 @@ const CustomHooksPage2 = () => {
       <RenderCountComp />
       <DebugInformationComp />
       <HoverComp />
+      <LongPressComp />
     </>
   );
 }
