@@ -11,7 +11,7 @@ import CookieComp from './customHooks/cookie/CookieComp';
 import TranslationComp from './customHooks/translation/TranslationComp';
 import OnlineStatusComp from './customHooks/onlineStatus/OnlineStatusComp';
 import RenderCountComp from './customHooks/renderCount/RenderCountComp';
-import DebugInformationComp from './customHooks/debugInformation/DebugInfomationComp';
+import DebugInformationComp from './customHooks/debugInformation/DebugInformationComp';
 
 const CustomHooksPage2 = () => {
   
