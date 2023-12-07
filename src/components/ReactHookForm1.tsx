@@ -11,7 +11,7 @@ const ReactHookForm1Page = () => {
     handleSubmit,
     formState: { errors },
     watch
-  } = useForm<TypeReactHookForm1>({mode: "onChange",}); // "onBlur" | "onChange" | "onSubmit" | "onTouched" | "all"
+  } = useForm<TypeReactHookForm1>({mode: "onChange"}); // "onBlur" | "onChange" | "onSubmit" | "onTouched" | "all"
 
   const selectedOption = watch("contentSelection");
 

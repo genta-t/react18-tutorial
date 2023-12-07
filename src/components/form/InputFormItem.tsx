@@ -31,5 +31,5 @@ type TypeInputFormItem = {
   type: string;
   InputRegister: any;
   errorMessage: any;
-  rule: any;
+  rule?: any;
 }

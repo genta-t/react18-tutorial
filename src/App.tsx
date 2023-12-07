@@ -5,6 +5,7 @@ import CustomHooksPage1 from './components/CustomHooks1';
 import CustomHooksPage2 from './components/CustomHooks2';
 import PageLinks from './components/items/PageLinks';
 import ReactHookForm1Page from './components/ReactHookForm1';
+import ReactHookForm2Page from './components/ReactHookForm2';
 
 const App = () => {
   const routes = [
@@ -27,6 +28,10 @@ const App = () => {
     {
       path: "/react-hook-form-1", 
       element: <ReactHookForm1Page />
+    },
+    {
+      path: "/react-hook-form-2", 
+      element: <ReactHookForm2Page />
     },
   ]
 

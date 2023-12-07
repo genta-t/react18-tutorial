@@ -26,6 +26,10 @@ const PageLinks = ({ link }: { link: string }) => {
       to: "/react-hook-form-1",
       label: "ReactHookForm1へ"
     },
+    {
+      to: "/react-hook-form-2",
+      label: "ReactHookForm2へ"
+    },
   ];
 
   const visibleLinks = links.filter(l => l.to !== link);
