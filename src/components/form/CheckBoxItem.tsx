@@ -3,13 +3,23 @@ const CheckBoxItem = ({
   requiredMessage,
   labelName,
   errorMessage,
-  checkBoxRegister
+  checkBoxRegister,
+  requiredItemFlag = true,
 }: TypeCheckBoxItem) => {
   return (
     <div> 
       <label htmlFor={labelName}>{title}</label>
-      <input type="checkbox" {...checkBoxRegister(labelName, {required: requiredMessage})} />
-      <p>{errorMessage as React.ReactNode}</p>
+      <input
+        type="checkbox"
+        {...requiredItemFlag
+          ? checkBoxRegister(
+              labelName,
+              {required: requiredMessage}
+            )
+          : checkBoxRegister(labelName)
+        }
+      />
+      <p>{requiredItemFlag ? errorMessage as React.ReactNode : ""}</p>
     </div>
   );
 }
@@ -22,4 +32,5 @@ type TypeCheckBoxItem = {
   requiredMessage: string;
   checkBoxRegister: any;
   errorMessage?: any;
+  requiredItemFlag?: boolean;
 }

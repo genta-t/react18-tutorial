@@ -28,7 +28,7 @@ const ReactHookForm1Page = () => {
           title={"名前"}
           labelName={"name"}
           type={"text"}
-          InputRegister={register}
+          inputRegister={register}
           errorMessage={errors.name?.message}
           rule={textRule("名前")}
         />
@@ -36,7 +36,7 @@ const ReactHookForm1Page = () => {
           title={"メールアドレス"}
           labelName={"email"}
           type={"email"}
-          InputRegister={register}
+          inputRegister={register}
           errorMessage={errors.email?.message}
           rule={emailRule}
         />
@@ -44,7 +44,7 @@ const ReactHookForm1Page = () => {
           title={"パスワード"}
           labelName={"password"}
           type={"password"}
-          InputRegister={register}
+          inputRegister={register}
           errorMessage={errors.password?.message}
           rule={passwordRule}
         />

@@ -2,9 +2,10 @@ const InputFormItem = ({
   title,
   labelName,
   type,
-  InputRegister,
+  inputRegister,
   errorMessage,
   rule,
+  requiredItemFlag = true,
 }: TypeInputFormItem) => {
   
   return (
@@ -13,12 +14,15 @@ const InputFormItem = ({
       <input
         id={labelName}
         type={type}
-        {...InputRegister(
-          labelName,
-          rule
-        )}
+        {...requiredItemFlag
+          ? inputRegister(
+            labelName,
+            rule
+          )
+          : inputRegister(labelName)
+        }
       />
-      <p>{errorMessage as React.ReactNode}</p>
+      <p>{requiredItemFlag ? errorMessage as React.ReactNode : ""}</p>
     </>
   );
 }
@@ -29,7 +33,8 @@ type TypeInputFormItem = {
   title: string;
   labelName: string;
   type: string;
-  InputRegister: any;
+  inputRegister: any;
   errorMessage: any;
   rule?: any;
+  requiredItemFlag?: boolean;
 }

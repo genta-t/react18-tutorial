@@ -2,12 +2,21 @@ const PullDownItem = ({
   title,
   labelName,
   pullDownRegister,
-  array
+  array,
+  requiredItemFlag = true,
 }: TypePullDownItem) => {
   return (
     <>
       <label htmlFor={labelName}>{title}</label>
-      <select {...pullDownRegister(labelName)}>
+      <select
+        {...requiredItemFlag
+          ? pullDownRegister(
+            labelName,
+            {required: `${title}を入れて`}
+          )
+          : pullDownRegister(labelName)
+        }
+      >
         {array.map((c, i) => {
           return <option key={i} value={c.value}>{c.text}</option>
         })}
@@ -23,6 +32,7 @@ type TypePullDownItem = {
   labelName: string;
   pullDownRegister: any;
   array: TypePullDownOptions[];
+  requiredItemFlag?: boolean;
 }
 
 type TypePullDownOptions = {

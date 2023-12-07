@@ -6,18 +6,25 @@ const DateFormItem = ({
   dateRegister,
   errorMessage,
   rule,
+  requiredItemFlag = true,
 }: TypeDateFormItem) => {
   
   return (
     <>
       <label htmlFor={labelName}>{title}</label>
       <input type="date"
-        {...dateRegister(labelName, {
-          required: `${title}を入れて`,
-          validate: rule
-        })}
+        {...requiredItemFlag
+          ? dateRegister(
+              labelName,
+              {
+                required: `${title}を入れて`,
+                validate: rule
+              }
+            )
+          : dateRegister(labelName)
+        }
         />
-        <p>{errorMessage as React.ReactNode}</p>
+        <p>{requiredItemFlag ? errorMessage as React.ReactNode : ""}</p>
     </>
   );
 }
@@ -30,4 +37,5 @@ type TypeDateFormItem = {
   dateRegister: any;
   errorMessage: any;
   rule?: any;
+  requiredItemFlag?: boolean;
 }

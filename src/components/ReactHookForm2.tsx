@@ -22,7 +22,7 @@ const ReactHookForm2Page = () => {
   }
 
   const onSubmit = (data: TypeReactHookForm2) => {
-    console.log(data);
+    console.log("data", data);
   }
   
   return (
@@ -34,7 +34,7 @@ const ReactHookForm2Page = () => {
           title={"名前"}
           labelName={"name"}
           type={"text"}
-          InputRegister={register}
+          inputRegister={register}
           errorMessage={errors.name?.message}
           rule={textRule("名前")}
         />
@@ -42,7 +42,7 @@ const ReactHookForm2Page = () => {
           title={"メールアドレス"}
           labelName={"email"}
           type={"email"}
-          InputRegister={register}
+          inputRegister={register}
           errorMessage={errors.email?.message}
           rule={emailRule}
         />
@@ -50,7 +50,7 @@ const ReactHookForm2Page = () => {
           title={"パスワード"}
           labelName={"password"}
           type={"password"}
-          InputRegister={register}
+          inputRegister={register}
           errorMessage={errors.password?.message}
           rule={passwordRule}
         />
@@ -58,7 +58,7 @@ const ReactHookForm2Page = () => {
           title={"確認パスワード"}
           labelName={"confPassword"}
           type={"password"}
-          InputRegister={register}
+          inputRegister={register}
           errorMessage={errors.confPassword?.message}
           rule={confPasswordRule}
         />
@@ -75,6 +75,7 @@ const ReactHookForm2Page = () => {
           dateRegister={register}
           errorMessage={errors.ageConfirmation?.message}
           rule={ageConfirmation(2)}
+          requiredItemFlag={false}
         />
         <PullDownItem 
           title={"好きな国"}
@@ -87,7 +88,7 @@ const ReactHookForm2Page = () => {
             title={"都道府県"}
             labelName={"prefectures"}
             type={"text"}
-            InputRegister={register}
+            inputRegister={register}
             errorMessage={errors.prefectures?.message}
             rule={textRule("都道府県")}
           />
@@ -95,9 +96,8 @@ const ReactHookForm2Page = () => {
         <FileItem 
           title={"添付ファイル"}
           labelName={"attachment"}
-          onChange={(e) => {
-            if(e.target.files) setValue("fileName", e.target.files[0].name);
-          }} 
+          fileRegister={register}
+          errorMessage={errors.attachment?.message}
         />
         <CheckBoxItem
           title={"利用規約"}
