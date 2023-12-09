@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import InputFormItem from './form/InputFormItem';
 import { emailRule, passwordRule, textRule } from './form/rules';
 import PageLinks from './items/PageLinks';
@@ -10,13 +10,22 @@ const ReactHookForm1Page = () => {
     register,
     handleSubmit,
     formState: { errors },
-    watch
+    watch,
+    unregister,
+    reset
   } = useForm<TypeReactHookForm1>({mode: "onChange"}); // "onBlur" | "onChange" | "onSubmit" | "onTouched" | "all"
 
   const selectedOption = watch("contentSelection");
 
+  useEffect(() => { // unregisterの使い方
+    if (selectedOption !== "period") unregister("periodChild");
+    if (selectedOption !== "item") unregister("itemChild");
+    if (selectedOption !== "platform") unregister("platformChild");
+  },[ selectedOption, unregister ])
+
   const onSubmit = (data: TypeReactHookForm1) => {
-    console.log(data)
+    console.log(data);
+    reset();
   }
   
   return (
@@ -31,6 +40,7 @@ const ReactHookForm1Page = () => {
           inputRegister={register}
           errorMessage={errors.name?.message}
           rule={textRule("名前")}
+          placeholder={"山田 太郎"}
         />
         <InputFormItem 
           title={"メールアドレス"}
@@ -39,6 +49,7 @@ const ReactHookForm1Page = () => {
           inputRegister={register}
           errorMessage={errors.email?.message}
           rule={emailRule}
+          placeholder={"sample@gmail.com"}
         />
         <InputFormItem 
           title={"パスワード"}

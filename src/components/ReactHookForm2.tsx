@@ -37,6 +37,7 @@ const ReactHookForm2Page = () => {
           inputRegister={register}
           errorMessage={errors.name?.message}
           rule={textRule("名前")}
+          placeholder={"山田 太郎"}
         />
         <InputFormItem 
           title={"メールアドレス"}
@@ -45,6 +46,7 @@ const ReactHookForm2Page = () => {
           inputRegister={register}
           errorMessage={errors.email?.message}
           rule={emailRule}
+          placeholder={"sample@gmail.com"}
         />
         <InputFormItem 
           title={"パスワード"}
@@ -91,6 +93,7 @@ const ReactHookForm2Page = () => {
             inputRegister={register}
             errorMessage={errors.prefectures?.message}
             rule={textRule("都道府県")}
+            placeholder={"鹿児島"}
           />
         )}
         <FileItem 

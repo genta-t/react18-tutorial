@@ -1,26 +1,26 @@
-const InputFormItem = ({
+const TextareaFormItem = ({
   title,
   labelName,
   type,
-  inputRegister,
+  textareaRegister,
   errorMessage,
   rule,
   requiredItemFlag = true,
   placeholder,
-}: TypeInputFormItem) => {
+}: TypeTextareaFormItem) => {
   
   return (
     <>
       <label htmlFor={labelName}>{title}</label>
-      <input
+      <textarea
         id={labelName}
         type={type}
         {...requiredItemFlag
-          ? inputRegister(
+          ? textareaRegister(
             labelName,
             rule
           )
-          : inputRegister(labelName)
+          : textareaRegister(labelName)
         }
         placeholder={placeholder}
       />
@@ -29,13 +29,13 @@ const InputFormItem = ({
   );
 }
 
-export default InputFormItem;
+export default TextareaFormItem;
 
-type TypeInputFormItem = {
+type TypeTextareaFormItem = {
   title: string;
   labelName: string;
   type: string;
-  inputRegister: any;
+  textareaRegister: any;
   errorMessage: any;
   rule?: any;
   requiredItemFlag?: boolean;

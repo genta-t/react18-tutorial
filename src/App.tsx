@@ -7,6 +7,7 @@ import PageLinks from './components/items/PageLinks';
 import ReactHookForm1Page from './components/ReactHookForm1';
 import ReactHookForm2Page from './components/ReactHookForm2';
 import ReactHookForm3Page from './components/ReactHookForm3';
+import ReactHookForm4Page from './components/ReactHookForm4';
 
 const App = () => {
   return (
@@ -58,5 +59,9 @@ const routes = [
   {
     path: "/react-hook-form-3", 
     element: <ReactHookForm3Page />
+  },
+  {
+    path: "/react-hook-form-4", 
+    element: <ReactHookForm4Page />
   },
 ]
