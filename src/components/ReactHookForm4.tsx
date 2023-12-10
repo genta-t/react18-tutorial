@@ -34,7 +34,7 @@ const ReactHookForm4Page = () => {
   return (
     <>
       <PageLinks link={"/react-hook-form-4"}/>
-      <p>ReactHookForm3</p>
+      <p>ReactHookForm4</p>
       <form onSubmit={handleSubmit(onSubmit)}>
         {fields.map((field, index) => {
           return(

@@ -8,6 +8,8 @@ import ReactHookForm1Page from './components/ReactHookForm1';
 import ReactHookForm2Page from './components/ReactHookForm2';
 import ReactHookForm3Page from './components/ReactHookForm3';
 import ReactHookForm4Page from './components/ReactHookForm4';
+import Part1Page from './components/ spanningPages/Part1Page';
+import Part2Page from './components/ spanningPages/Part2Page';
 
 const App = () => {
   return (
@@ -59,6 +61,14 @@ const routes = [
   {
     path: "/react-hook-form-3", 
     element: <ReactHookForm3Page />
+  },
+  {
+    path: "/react-hook-form-3-1", 
+    element: <Part1Page />
+  },
+  {
+    path: "/react-hook-form-3-2", 
+    element: <Part2Page />
   },
   {
     path: "/react-hook-form-4", 
