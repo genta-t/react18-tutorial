@@ -1,34 +1,33 @@
 import { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import InputFormItem from '../form/InputFormItem';
 import { textRule } from '../form/rules';
 import { useForm } from "react-hook-form";
-import { FormDataContext } from '../ReactHookForm3';
-import { TypeReactHookForm3 } from './Part1Page';
+import { FormDataContext, TypeReactHookForm3 } from '../ReactHookForm3';
+import PartPageLinks from './PartPageLinks';
 
 const Part2Page = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-    watch,
-    unregister,
-    reset
   } = useForm<TypeReactHookForm3>({mode: "onChange"});
   const formData = useContext(FormDataContext);
+  const navigate = useNavigate();
 
 
   const onSubmit = (data: TypeReactHookForm3) => {
-    console.log(data);
+    console.log("data", data);
     if (formData && formData.updateData) formData.updateData(data);
-    console.log(formData);
+    console.log("formData", formData);
+    console.log("afterData", data);
+    navigate('/react-hook-form-3/3');
   }
   
   return (
     <>
-      {/* <PageLinks link={"/react-hook-form-1"}/> */}
-      <Link to={"/react-hook-form-3-1"} style={{ marginRight: "8px"}}>Part1</Link>
-      <p>Part2</p>
+      <PartPageLinks link={"/react-hook-form-3/2"}/>
+      <p>Part2Page</p>
       <form onSubmit={handleSubmit(onSubmit)}>
         <InputFormItem 
           title={"都道府県"}

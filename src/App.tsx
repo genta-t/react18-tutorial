@@ -6,12 +6,26 @@ import CustomHooksPage2 from './components/CustomHooks2';
 import PageLinks from './components/items/PageLinks';
 import ReactHookForm1Page from './components/ReactHookForm1';
 import ReactHookForm2Page from './components/ReactHookForm2';
-import ReactHookForm3Page from './components/ReactHookForm3';
+import ReactHookForm3Page, { FormDataProvider } from './components/ReactHookForm3';
 import ReactHookForm4Page from './components/ReactHookForm4';
-import Part1Page from './components/ spanningPages/Part1Page';
-import Part2Page from './components/ spanningPages/Part2Page';
+import Part1Page from './components/spanningPages/Part1Page';
+import Part2Page from './components/spanningPages/Part2Page';
+import { useState } from 'react';
+import Part3Page from './components/spanningPages/Part3Page';
+import ConfirmPage from './components/spanningPages/ConfirmPage';
 
 const App = () => {
+  const [ formData, setFormData ] = useState({
+    name: '',
+    email: '',
+    prefectures: '',
+    age: 0
+  });
+
+  const updateData = (newData: any) => {
+    setFormData({ ...formData, ...newData});
+  }
+
   return (
     <>
       <Router>
@@ -25,6 +39,18 @@ const App = () => {
               <h2>ホーム</h2>
             </>
           } />
+          {spanningPages.map((r, i) => {
+            return (
+              <Route key={i} path={r.path} element={
+                <>
+                  <ReactHookForm3Page />
+                  <FormDataProvider value={{ formData, updateData }}>
+                    {r.element}
+                  </FormDataProvider>
+                </>
+              } />
+            );
+          })}
         </Routes>
       </Router>
     </>
@@ -73,5 +99,24 @@ const routes = [
   {
     path: "/react-hook-form-4", 
     element: <ReactHookForm4Page />
+  },
+]
+
+const spanningPages = [
+  {
+    path: "/react-hook-form-3/1", 
+    element: <Part1Page />
+  },
+  {
+    path: "/react-hook-form-3/2", 
+    element: <Part2Page />
+  },
+  {
+    path: "/react-hook-form-3/3", 
+    element: <Part3Page />
+  },
+  {
+    path: "/react-hook-form-3/confirm", 
+    element: <ConfirmPage />
   },
 ]
