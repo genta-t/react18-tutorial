@@ -13,16 +13,17 @@ import Part2Page from './components/spanningPages/Part2Page';
 import { useState } from 'react';
 import Part3Page from './components/spanningPages/Part3Page';
 import ConfirmPage from './components/spanningPages/ConfirmPage';
+import { TypeReactHookForm3 } from './components/types';
 
 const App = () => {
-  const [ formData, setFormData ] = useState({
+  const [ formData, setFormData ] = useState<TypeReactHookForm3>({
     name: '',
     email: '',
     prefectures: '',
-    age: 0
+    age: null
   });
 
-  const updateData = (newData: any) => {
+  const updateData = (newData: TypeReactHookForm3) => {
     setFormData({ ...formData, ...newData});
   }
 
@@ -86,15 +87,7 @@ const routes = [
   },
   {
     path: "/react-hook-form-3", 
-    element: <ReactHookForm3Page />
-  },
-  {
-    path: "/react-hook-form-3-1", 
-    element: <Part1Page />
-  },
-  {
-    path: "/react-hook-form-3-2", 
-    element: <Part2Page />
+    element: <ReactHookForm3Page defaultLink="/react-hook-form-3/1"/>
   },
   {
     path: "/react-hook-form-4", 
