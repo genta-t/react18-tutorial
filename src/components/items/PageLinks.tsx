@@ -22,6 +22,26 @@ const PageLinks = ({ link }: { link: string }) => {
       to: "/custom-hooks-2",
       label: "カスタムフックページ2へ"
     },
+    {
+      to: "/react-hook-form-1",
+      label: "ReactHookForm1へ"
+    },
+    {
+      to: "/react-hook-form-2",
+      label: "ReactHookForm2へ"
+    },
+    {
+      to: "/react-hook-form-3",
+      label: "ReactHookForm3へ"
+    },
+    {
+      to: "/react-hook-form-4",
+      label: "ReactHookForm4へ"
+    },
+    {
+      to: "/react-hook-form-5",
+      label: "ReactHookForm5へ"
+    },
   ];
 
   const visibleLinks = links.filter(l => l.to !== link);
