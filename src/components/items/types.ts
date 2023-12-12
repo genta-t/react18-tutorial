@@ -72,3 +72,27 @@ export type TypesForm = {
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   onSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 };
+
+export type TypesTooltipContainer = {
+  children: any;
+  x: number;
+  y: number;
+  contentRef: any;
+};
+
+export type TypesTooltip = {
+  children: any;
+  targetRect: any;
+};
+
+export type TypesTooltipContent = {
+  tooltipContent: React.ReactNode;
+  children?: React.ReactNode;
+};
+
+export type TypesSetTargetRect = {
+  left?: number;
+  top?: number;
+  right?: number;
+  bottom?: number;
+} | null;
