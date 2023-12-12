@@ -15,6 +15,10 @@ const PageLinks = ({ link }: { link: string }) => {
       label: "応用ページへ"
     },
     {
+      to: "/test-hooks",
+      label: "テストフックページへ"
+    },
+    {
       to: "/custom-hooks-1",
       label: "カスタムフックページ1へ"
     },

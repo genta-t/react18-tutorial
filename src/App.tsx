@@ -15,6 +15,7 @@ import { useState } from 'react';
 import Part3Page from './components/spanningPages/Part3Page';
 import ConfirmPage from './components/spanningPages/ConfirmPage';
 import { TypeReactHookForm3 } from './components/types';
+import TestHooksPage from './components/TestHooksPage';
 
 const App = () => {
   const [ formData, setFormData ] = useState<TypeReactHookForm3>({
@@ -69,6 +70,10 @@ const routes = [
   {
     path: "/application", 
     element: <ApplicationPage />
+  },
+  {
+    path: "/test-hooks", 
+    element: <TestHooksPage />
   },
   {
     path: "/custom-hooks-1", 
