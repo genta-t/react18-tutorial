@@ -8,6 +8,7 @@ import ReactHookForm1Page from './components/ReactHookForm1';
 import ReactHookForm2Page from './components/ReactHookForm2';
 import ReactHookForm3Page, { FormDataProvider } from './components/ReactHookForm3';
 import ReactHookForm4Page from './components/ReactHookForm4';
+import ReactHookForm5Page from './components/ReactHookForm5';
 import Part1Page from './components/spanningPages/Part1Page';
 import Part2Page from './components/spanningPages/Part2Page';
 import { useState } from 'react';
@@ -92,6 +93,10 @@ const routes = [
   {
     path: "/react-hook-form-4", 
     element: <ReactHookForm4Page />
+  },
+  {
+    path: "/react-hook-form-5", 
+    element: <ReactHookForm5Page />
   },
 ]
 

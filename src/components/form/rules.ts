@@ -22,6 +22,21 @@ export const passwordRule = {
   }
 }
 
+export const phoneNumberRule = {
+  minLength: {
+    value: 6,
+    message: "「電話番号」の入力文字数が少なすぎます",
+  },
+  maxLength: {
+    value: 13,
+    message: "「電話番号」の入力文字数が多すぎます",
+  },
+  pattern: {
+    value: /^[0-9-]+$/,
+    message: "「電話番号」の入力形式が正しくありません",
+  },
+};
+
 export const previousDate = (date: string, messageDate: string) => {
   return (value: string) => {
     const selectedDate = new Date(value);
