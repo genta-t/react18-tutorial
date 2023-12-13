@@ -22,6 +22,7 @@ const App = () => {
     name: '',
     email: '',
     prefectures: '',
+    attachment: '',
     age: null
   });
 

@@ -7,5 +7,6 @@ export type TypeReactHookForm3 = {
   name: string;
   email: string;
   prefectures: string;
+  attachment: any;
   age?: number | null;
 }

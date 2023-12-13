@@ -6,13 +6,13 @@ import { TypeReactHookForm3 } from '../types';
 
 const ConfirmPage = () => {
   const { handleSubmit } = useForm<TypeReactHookForm3>({mode: "onChange"});
-  const formData = useContext(FormDataContext);
+  const confData = useContext(FormDataContext);
   const navigate = useNavigate();
 
   const onSubmit = (data: TypeReactHookForm3) => {
     alert("本当にいいんですね？");
-    if (formData && formData.updateData) formData.updateData(data);
-    console.log("formData", formData);
+    if (confData && confData.updateData) confData.updateData(data);
+    console.log("confData", confData);
     alert("送信しました");
   }
 
@@ -31,14 +31,15 @@ const ConfirmPage = () => {
   return (
     <>
       <p>ConfirmPage</p>
-      {formData?.formData && (
+      {confData?.formData && (
         <>
-          <p>名前: {formData.formData.name}</p>
-          <p>メールアドレス: {formData.formData.email}</p>
+          <p>名前: {confData.formData.name}</p>
+          <p>メールアドレス: {confData.formData.email}</p>
           <button onClick={handlePage1Edit}>1を修正する</button>
-          <p>都道府県: {formData.formData.prefectures}</p>
+          <p>都道府県: {confData.formData.prefectures}</p>
           <button onClick={handlePage2Edit}>2を修正する</button>
-          <p>年齢: {formData.formData.age}</p>
+          <p>年齢: {confData.formData.age}</p>
+          <p>添付ファイル: {confData.formData.attachment?.[0]?.name || ""}</p>
           <button onClick={handlePage3Edit}>3を修正する</button>
         </>
       )}
