@@ -6,7 +6,7 @@ const PullDownItem = ({
   requiredItemFlag = true,
 }: TypePullDownItem) => {
   return (
-    <>
+    <div>
       <label htmlFor={labelName}>{title}</label>
       <select
         {...requiredItemFlag
@@ -18,10 +18,10 @@ const PullDownItem = ({
         }
       >
         {array.map((c, i) => {
-          return <option key={i} value={c.value}>{c.text}</option>
+          return <option key={i ? i : c.id} value={c.value ? c.value : c.text}>{c.text}</option>
         })}
       </select>
-    </>
+    </div>
   );
 }
 
@@ -36,6 +36,7 @@ type TypePullDownItem = {
 }
 
 type TypePullDownOptions = {
-  value: string;
+  id? : number;
+  value?: string;
   text: string;
 }

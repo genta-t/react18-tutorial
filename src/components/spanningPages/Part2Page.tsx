@@ -3,6 +3,7 @@ import InputFormItem from '../form/InputFormItem';
 import { textRule } from '../form/rules';
 import PartPageLinks from './PartPageLinks';
 import { useFormPartContext, onSubmit } from './utils';
+import PullDownItem from '../form/PullDownItem';
 
 const Part2Page = () => {
   const { formPartData, register, handleSubmit, formState: { errors } } = useFormPartContext();
@@ -22,6 +23,18 @@ const Part2Page = () => {
           rule={textRule("都道府県")}
           placeholder={"鹿児島"}
         />
+        {/* <PullDownItem
+          title={"都道府県"}
+          labelName={"address.prefectures"}
+          pullDownRegister={register}
+          array={prefectures}
+        />
+        <PullDownItem
+          title={"市町村"}
+          labelName={"address.city"}
+          pullDownRegister={register}
+          array={prefectures}
+        /> */}
         <button type='submit'>次へ</button>
       </form>
     </>
@@ -29,3 +42,15 @@ const Part2Page = () => {
 }
 
 export default Part2Page;
+
+const prefectures = [
+  { id: 1, text: '東京都' },
+  { id: 2, text: '鹿児島' },
+  // 他の都道府県データ...
+];
+
+const cities = {
+  1: ['新宿区', '渋谷区', '台東区'],
+  2: ['南九州市', '鹿児島市', '指宿市'],
+  // 他の市町村データ...
+};
