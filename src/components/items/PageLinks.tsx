@@ -50,6 +50,10 @@ const PageLinks = ({ link }: { link: string }) => {
       to: "/use-query",
       label: "UseQueryへ"
     },
+    {
+      to: "/jotai-app",
+      label: "jotaiへ"
+    },
   ];
 
   const visibleLinks = links.filter(l => l.to !== link);

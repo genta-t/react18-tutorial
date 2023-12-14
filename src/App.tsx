@@ -17,6 +17,7 @@ import ConfirmPage from './components/spanningPages/ConfirmPage';
 import { TypeReactHookForm3 } from './components/types';
 import TestHooksPage from './components/TestHooksPage';
 import UseQueryPage from './components/UseQueryPage';
+import JotaiAppPage from './components/JotaiAppPage';
 
 const App = () => {
   const [ formData, setFormData ] = useState<TypeReactHookForm3>({
@@ -108,6 +109,10 @@ const routes = [
   {
     path: "/use-query", 
     element: <UseQueryPage />
+  },
+  {
+    path: "/jotai-app", 
+    element: <JotaiAppPage />
   },
 ]
 
