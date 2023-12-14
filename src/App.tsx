@@ -16,6 +16,7 @@ import Part3Page from './components/spanningPages/Part3Page';
 import ConfirmPage from './components/spanningPages/ConfirmPage';
 import { TypeReactHookForm3 } from './components/types';
 import TestHooksPage from './components/TestHooksPage';
+import UseQueryPage from './components/UseQueryPage';
 
 const App = () => {
   const [ formData, setFormData ] = useState<TypeReactHookForm3>({
@@ -53,8 +54,8 @@ const App = () => {
                   </FormDataProvider>
                 </>
               } />
-            );
-          })}
+              );
+            })}
         </Routes>
       </Router>
     </>
@@ -103,6 +104,10 @@ const routes = [
   {
     path: "/react-hook-form-5", 
     element: <ReactHookForm5Page />
+  },
+  {
+    path: "/use-query", 
+    element: <UseQueryPage />
   },
 ]
 
