@@ -53,3 +53,12 @@ export const ageConfirmation = (age: number) => {
     return myAge > age || `${age}歳以上ですか？`;
   }
 }
+
+export const fileType = (fileTypesArray: string[]) => {
+  return (value: any) => {
+    const fileType = value ? value[0].name.split(".").pop() : "";
+    if (!fileTypesArray.includes(fileType)) {
+      return `ファイル形式は${fileTypesArray.join(",")}でお願いします。`
+    }
+  }
+}

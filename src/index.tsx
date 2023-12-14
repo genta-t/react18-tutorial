@@ -3,6 +3,10 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { QueryClient, QueryClientProvider } from 'react-query';
+
+// react-query
+const queryClient = new QueryClient();
 
 // useContext 
 const containerData = {
@@ -21,7 +25,10 @@ root.render(
   // contextの書き方
   <ContainerDataContext.Provider value={containerData}>
     <React.StrictMode>
-      <App />
+      {/* react-queryの書き方 */}
+      <QueryClientProvider client={queryClient}>
+        <App />
+      </QueryClientProvider>
     </React.StrictMode>
   </ContainerDataContext.Provider>
 );

@@ -16,12 +16,15 @@ import Part3Page from './components/spanningPages/Part3Page';
 import ConfirmPage from './components/spanningPages/ConfirmPage';
 import { TypeReactHookForm3 } from './components/types';
 import TestHooksPage from './components/TestHooksPage';
+import UseQueryPage from './components/UseQueryPage';
+import JotaiAppPage from './components/JotaiAppPage';
 
 const App = () => {
   const [ formData, setFormData ] = useState<TypeReactHookForm3>({
     name: '',
     email: '',
     prefectures: '',
+    attachment: '',
     age: null
   });
 
@@ -52,8 +55,8 @@ const App = () => {
                   </FormDataProvider>
                 </>
               } />
-            );
-          })}
+              );
+            })}
         </Routes>
       </Router>
     </>
@@ -102,6 +105,14 @@ const routes = [
   {
     path: "/react-hook-form-5", 
     element: <ReactHookForm5Page />
+  },
+  {
+    path: "/use-query", 
+    element: <UseQueryPage />
+  },
+  {
+    path: "/jotai-app", 
+    element: <JotaiAppPage />
   },
 ]
 

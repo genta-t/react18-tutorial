@@ -4,6 +4,7 @@ const FileItem = ({
   fileRegister,
   errorMessage,
   requiredItemFlag = true,
+  rule
   // onChange
 }: TypeFileItem) => {
   return (
@@ -13,7 +14,10 @@ const FileItem = ({
         {...requiredItemFlag
           ? fileRegister(
             labelName,
-            { required: `${title}を添付してください` }
+            {
+              required: `${title}を添付してください`,
+              validate: rule
+            }
             )
           : fileRegister(labelName)
         }
@@ -32,5 +36,6 @@ type TypeFileItem = {
   fileRegister: any;
   errorMessage?: any;
   requiredItemFlag?: boolean;
+  rule?: any;
   // onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
