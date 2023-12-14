@@ -18,6 +18,7 @@ import { TypeReactHookForm3 } from './components/types';
 import TestHooksPage from './components/TestHooksPage';
 import UseQueryPage from './components/UseQueryPage';
 import JotaiAppPage from './components/JotaiAppPage';
+import JotaiBasePage from './components/JotaiBasePage';
 
 const App = () => {
   const [ formData, setFormData ] = useState<TypeReactHookForm3>({
@@ -109,6 +110,10 @@ const routes = [
   {
     path: "/use-query", 
     element: <UseQueryPage />
+  },
+  {
+    path: "/jotai-base", 
+    element: <JotaiBasePage />
   },
   {
     path: "/jotai-app", 

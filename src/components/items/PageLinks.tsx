@@ -51,6 +51,10 @@ const PageLinks = ({ link }: { link: string }) => {
       label: "UseQueryへ"
     },
     {
+      to: "/jotai-base",
+      label: "jotai基本へ"
+    },
+    {
       to: "/jotai-app",
       label: "jotaiへ"
     },

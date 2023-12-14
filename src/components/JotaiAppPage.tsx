@@ -10,7 +10,7 @@ const JotaiAppPage = () => {
   return (
     <div style={{ margin: "0 24px" }}>
       <PageLinks link={"/jotai-app"}/>
-      <p>jotaiです</p>
+      <p>jotai応用です</p>
       {lineAtoms.map((l) => {
         return <Line key={l.toString()} lineAtom={l} />
       })}

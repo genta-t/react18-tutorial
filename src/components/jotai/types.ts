@@ -1,4 +1,6 @@
+import { PrimitiveAtom } from "jotai";
 import { createItemAtom, createLineAtom } from "./utils";
+import { TypesTodo } from "../items/types";
 
 
 export type TypesItem = {
@@ -24,4 +26,20 @@ export type TypesLineComp = {
 export type TypesItemComp = {
   itemAtom : TypesItemAtom; 
   lineAtom: TypesLineAtom;
+}
+
+export type TypesAtomTodo = {
+  title: string;
+  completed: boolean;
+}
+
+export type RemoveFn = (item: PrimitiveAtom<TypesAtomTodo>) => void;
+
+export type TypesAtomTodoItemProps = {
+  atom: PrimitiveAtom<TypesAtomTodo>;
+  remove: RemoveFn;
+}
+
+export type TypesFilteredProps = {
+  remove: (atom: any) => void;
 }
