@@ -20,6 +20,7 @@ import UseQueryPage from './components/UseQueryPage';
 import JotaiAppPage from './components/JotaiAppPage';
 import JotaiBasePage from './components/JotaiBasePage';
 import SuspensePage from './components/SuspensePage';
+import JestTestingPage from './components/JestTestingPage';
 
 const App = () => {
   const [ formData, setFormData ] = useState<TypeReactHookForm3>({
@@ -123,6 +124,10 @@ const routes = [
   {
     path: "/suspense", 
     element: <SuspensePage />
+  },
+  {
+    path: "/testing", 
+    element: <JestTestingPage />
   },
 ]
 

@@ -62,6 +62,10 @@ const PageLinks = ({ link }: { link: string }) => {
       to: "/suspense",
       label: "suspenseへ"
     },
+    {
+      to: "/testing",
+      label: "テストコード練習へ"
+    },
   ];
 
   const visibleLinks = links.filter(l => l.to !== link);
