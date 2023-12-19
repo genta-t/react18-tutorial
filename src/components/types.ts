@@ -10,3 +10,20 @@ export type TypeReactHookForm3 = {
   attachment: any;
   age?: number | null;
 }
+
+export type TypeCurrentUserId = {
+  currentUserId: any;
+  setCurrentUserId: any;
+}
+
+export type TypePostUser = {
+  post: any;
+  user: any;
+}
+
+export type TypePost = {
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
+}

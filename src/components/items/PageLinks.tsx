@@ -58,6 +58,10 @@ const PageLinks = ({ link }: { link: string }) => {
       to: "/jotai-app",
       label: "jotaiへ"
     },
+    {
+      to: "/suspense",
+      label: "suspenseへ"
+    },
   ];
 
   const visibleLinks = links.filter(l => l.to !== link);
